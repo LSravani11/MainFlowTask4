@@ -1,0 +1,132 @@
+/* Global Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(145deg, #0f0c29, #302b63, #24243e);
+    color: white;
+    overflow: hidden;
+}
+
+/* Calculator Container */
+.calculator-container {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Glass Effect */
+.calculator {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Header Styling */
+.header {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff6f61;
+    text-align: center;
+    letter-spacing: 2px;
+    animation: glow 2s infinite alternate;
+}
+
+/* Glow Animation */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #ff6f61, 0 0 20px #ff6f61, 0 0 30px #ff6f61;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff3d3d, 0 0 30px #ff3d3d, 0 0 40px #ff3d3d;
+    }
+}
+
+/* Result Display */
+#result {
+    width: 90%;
+    height: 70px;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 2rem;
+    text-align: right;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+}
+
+#result:focus {
+    outline: none;
+    transform: scale(1.02);
+}
+
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    width: 90%;
+}
+
+/* Button Styling */
+button {
+    height: 60px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+}
+
+/* Specific Button Colors */
+.action-btn {
+    background: #ff6f61;
+    color: white;
+}
+
+.action-btn:hover {
+    background: #ff3d3d;
+}
+
+.operator-btn {
+    background: #6a82fb;
+    color: white;
+}
+
+.operator-btn:hover {
+    background: #5a73ea;
+}
+
+.equals-btn {
+    background: #32cd32;
+    color: white;
+    grid-column: span 2;
+}
+
+.equals-btn:hover {
+    background: #2aa82a;
+}
